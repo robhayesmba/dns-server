@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  dns-server:
+    image: strm/dnsmasq
+    ports:
+      - "53:53/udp"
+    volumes:
+      - ./dnsmasq.conf:/etc/dnsmasq.conf
+      - ./hosts:/etc/hosts
+    cap_add:
+      - NET_ADMIN
+    restart: always
