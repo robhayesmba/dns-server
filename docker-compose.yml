@@ -9,3 +9,4 @@ services:
       - ./hosts:/etc/hosts
     cap_add:
       - NET_ADMIN
+    restart: always
